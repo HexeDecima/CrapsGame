@@ -29,7 +29,7 @@ int main() {
     bool is_valid = false;
     // Game loop
     printf("Play a game? (Y/N): ");
-    while (!is_valid) { // In this loop it waits for a second ENTER
+    while (!is_valid) { 
         user_choice = getchar();
         int ch;
         while ((ch = getchar()) != '\n' && ch != EOF) {} // clear the buffer
@@ -48,9 +48,8 @@ int main() {
 }
 
 int roll_dice(void) {
-    // Generate 2 random numbers 1-6
+    // Generate the equivalent of a sum of 2 random numbers 1-6
     int dices = (rand() % 12 + 1);
-    // Sum the numbers
     return dices;
 }
 
@@ -64,7 +63,7 @@ bool play_game(void) {
     
     // One dice roll
     printf("Roll dice ('R')\n");
-    while (!is_valid) { // This loop goes fine
+    while (!is_valid) { 
         first_roll = getchar();     
         int ch;
         while ((ch = getchar()) != '\n' && ch != EOF) {} // clear the buffer
@@ -166,7 +165,7 @@ bool play_game(void) {
             int roll_2;
             bool is_valid = false;
 
-            while (!is_valid) { // This loop goes fine
+            while (!is_valid) { 
                 printf("Press 'R' to roll again.\n");
                 roll_2 = getchar();     
                 int ch;
@@ -203,7 +202,7 @@ bool play_game(void) {
     // Recursion
     is_valid = false;
     printf("Play another game? (Y/N): ");
-    while (!is_valid) { // In this loop it waits for a second ENTER
+    while (!is_valid) { 
         user_choice = getchar();
         int ch;
         while ((ch = getchar()) != '\n' && ch != EOF) {} 
